@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.aware">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aware" >
 
     <!-- FOR PLUGINS/APPS COMMENT STARTS HERE -->
 
@@ -48,258 +49,288 @@
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Aware">
-
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        android:theme="@style/Theme.Aware" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <!-- Activities -->
 
         <activity
-            android:name="com.aware.Aware_Preferences"
+            android:name=".Aware_Preferences"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:enabled="@bool/display_aware"
             android:exported="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/aware_sensors"
-            android:theme="@style/Theme.Aware"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Aware" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.aware.ui.Stream_UI"
-            android:exported="true"
+            android:name=".ui.Stream_UI"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:enabled="@bool/display_aware"
+            android:exported="true"
             android:icon="@drawable/ic_launcher_settings"
             android:label="@string/aware_stream"
-            android:noHistory="true"
             android:launchMode="singleTop"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:theme="@style/Theme.Aware"
-            android:parentActivityName="com.aware.Aware_Preferences"
-            >
+            android:noHistory="true"
+            android:parentActivityName=".Aware_Preferences"
+            android:theme="@style/Theme.Aware" >
             <intent-filter>
                 <action android:name="android.intent.action.ASSIST" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="com.android.systemui.action_assist_icon"
                 android:resource="@drawable/ic_launcher" />
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.aware.Aware_Preferences" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aware.Aware_Preferences" />
         </activity>
         <activity
-            android:name="com.aware.ui.CameraStudy"
+            android:name=".ui.CameraStudy"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:enabled="@bool/display_aware"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="singleTop"
-            android:theme="@style/Theme.Aware"
             android:label="@string/aware_studies"
-            android:parentActivityName="com.aware.Aware_Preferences"
-            >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.aware.Aware_Preferences" />
+            android:launchMode="singleTop"
+            android:parentActivityName=".Aware_Preferences"
+            android:theme="@style/Theme.Aware" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aware.Aware_Preferences" />
         </activity>
         <activity
-            android:name="com.aware.ui.Plugins_Manager"
+            android:name=".ui.Plugins_Manager"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="singleTop"
             android:exported="true"
             android:icon="@drawable/ic_launcher_settings"
             android:label="@string/aware_plugins"
-            android:theme="@style/Theme.Aware"
-            android:parentActivityName="com.aware.Aware_Preferences"
-            >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.aware.Aware_Preferences" />
-        </activity>
-        <activity android:name="com.aware.ui.About"
-            android:enabled="@bool/display_aware"
-            android:configChanges="keyboardHidden|orientation|screenSize"
             android:launchMode="singleTop"
-            android:exported="true"
-            android:label="@string/aware_team"
-            android:theme="@style/Theme.Aware"
-            android:parentActivityName="com.aware.Aware_Preferences"
-            >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.aware.Aware_Preferences" />
+            android:parentActivityName=".Aware_Preferences"
+            android:theme="@style/Theme.Aware" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aware.Aware_Preferences" />
         </activity>
         <activity
-            android:name="com.aware.ui.ESM_Queue"
+            android:name=".ui.About"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:enabled="@bool/display_aware"
+            android:exported="true"
+            android:label="@string/aware_team"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Aware_Preferences"
+            android:theme="@style/Theme.Aware" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aware.Aware_Preferences" />
+        </activity>
+        <activity
+            android:name=".ui.ESM_Queue"
+            android:clearTaskOnLaunch="true"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:showOnLockScreen="true"
-            android:noHistory="true"
-            android:clearTaskOnLaunch="true"
             android:launchMode="singleTop"
-            android:theme="@android:style/Theme.DeviceDefault.Dialog">
+            android:noHistory="true"
+            android:showOnLockScreen="true"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" >
         </activity>
 
         <!-- Services -->
 
-        <service android:name="com.aware.utils.WearClient" android:exported="true" android:enabled="@bool/display_aware"/>
-        <service android:name="com.aware.utils.WearProxy" android:exported="true" android:enabled="@bool/display_aware">
+        <service
+            android:name=".utils.WearClient"
+            android:enabled="@bool/display_aware"
+            android:exported="true" />
+        <service
+            android:name=".utils.WearProxy"
+            android:enabled="@bool/display_aware"
+            android:exported="true" >
             <intent-filter>
-                <action android:name="com.google.android.gms.wearable.BIND_LISTENER"/>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
             </intent-filter>
         </service>
-
-        <service android:name="com.aware.Keyboard" android:exported="true" />
         <service
-            android:name="com.aware.Aware"
+            android:name=".Keyboard"
+            android:exported="true" />
+        <service
+            android:name=".Aware"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Applications"
-            android:exported="true"
+            android:name=".Applications"
             android:enabled="@bool/display_aware"
+            android:exported="true"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
-            <meta-data android:name="android.accessibilityservice" android:resource="@xml/aware_accessibility_config" />
-        </service>
-        <service
-            android:name="com.aware.Applications$BackgroundService"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.aware.Locations"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.aware.Bluetooth"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.aware.Screen"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.aware.Battery"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.aware.Network"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.aware.Communication"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.aware.Processor"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.aware.TimeZone"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.aware.Mqtt"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.aware.Traffic"
-            android:exported="true" >
-        </service>
 
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/aware_accessibility_config" />
+        </service>
         <service
-            android:name="com.aware.Accelerometer"
+            android:name=".Applications$BackgroundService"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Gyroscope"
+            android:name=".Locations"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Bluetooth$BackgroundService"
+            android:name=".Bluetooth"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.WiFi"
+            android:name=".Screen"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.WiFi$BackgroundService"
+            android:name=".Battery"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Telephony"
+            android:name=".Network"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Rotation"
+            android:name=".Communication"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Light"
+            android:name=".Processor"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Proximity"
+            android:name=".TimeZone"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Magnetometer"
+            android:name=".Mqtt"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Barometer"
+            android:name=".Traffic"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Gravity"
+            android:name=".Accelerometer"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.LinearAccelerometer"
+            android:name=".Gyroscope"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Temperature"
+            android:name=".Bluetooth$BackgroundService"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.ESM"
+            android:name=".WiFi"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.ESM$BackgroundService"
+            android:name=".WiFi$BackgroundService"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.Installations"
+            android:name=".Telephony"
             android:exported="true" >
         </service>
         <service
-            android:name="com.aware.utils.WebserviceHelper"
+            android:name=".Rotation"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".Light"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".Proximity"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".Magnetometer"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".Barometer"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".Gravity"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".LinearAccelerometer"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".Temperature"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".ESM"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".ESM$BackgroundService"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".Installations"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".utils.WebserviceHelper"
             android:exported="true" >
             <intent-filter>
                 <action android:name="ACTION_AWARE_WEBSERVICE_SYNC_TABLE" />
                 <action android:name="ACTION_AWARE_WEBSERVICE_CLEAR_TABLE" />
             </intent-filter>
         </service>
-        <service android:name="com.aware.Aware_Preferences$StudyConfig" android:exported="true"/>
-        <service android:name="com.aware.Aware$UpdateFrameworkService" android:exported="true" android:enabled="@bool/display_aware"/>
-        <service android:name="com.aware.utils.DownloadPluginService" android:exported="true"/>
-        <service android:name="com.aware.Aware$UpdatePlugins" android:exported="true" android:enabled="@bool/display_aware"/>
+        <service
+            android:name=".Aware_Preferences$StudyConfig"
+            android:exported="true" />
+        <service
+            android:name=".Aware$UpdateFrameworkService"
+            android:enabled="@bool/display_aware"
+            android:exported="true" />
+        <service
+            android:name=".utils.DownloadPluginService"
+            android:exported="true" />
+        <service
+            android:name=".Aware$UpdatePlugins"
+            android:enabled="@bool/display_aware"
+            android:exported="true" />
 
         <!-- Receivers -->
 
-        <receiver android:name="com.aware.utils.WearClient$AndroidWearHTTPClient" android:exported="true" android:enabled="@bool/display_aware">
+        <receiver
+            android:name=".utils.WearClient$AndroidWearHTTPClient"
+            android:enabled="@bool/display_aware"
+            android:exported="true" >
             <intent-filter>
-                <action android:name="ACTION_AWARE_ANDROID_WEAR_HTTP_GET"/>
-                <action android:name="ACTION_AWARE_ANDROID_WEAR_HTTP_POST"/>
-                <action android:name="ACTION_AWARE_ANDROID_WEAR_INSTALL_PLUGIN"/>
-                <action android:name="ACTION_AWARE_ANDROID_WEAR_JOIN_STUDY"/>
-                <action android:name="ACTION_AWARE_ANDROID_WEAR_QUIT_STUDY"/>
+                <action android:name="ACTION_AWARE_ANDROID_WEAR_HTTP_GET" />
+                <action android:name="ACTION_AWARE_ANDROID_WEAR_HTTP_POST" />
+                <action android:name="ACTION_AWARE_ANDROID_WEAR_INSTALL_PLUGIN" />
+                <action android:name="ACTION_AWARE_ANDROID_WEAR_JOIN_STUDY" />
+                <action android:name="ACTION_AWARE_ANDROID_WEAR_QUIT_STUDY" />
             </intent-filter>
         </receiver>
-
         <receiver
-            android:name="com.aware.Aware$Aware_Broadcaster"
+            android:name=".Aware$Aware_Broadcaster"
             android:exported="true" >
             <intent-filter>
                 <action android:name="ACTION_AWARE_SYNC_DATA" />
@@ -308,16 +339,21 @@
                 <action android:name="ACTION_AWARE_REFRESH" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.aware.Aware$PluginMonitor" android:exported="true" android:enabled="@bool/display_aware">
+        <receiver
+            android:name=".Aware$PluginMonitor"
+            android:enabled="@bool/display_aware"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.aware.Aware$Storage_Broadcaster"
-            android:exported="true" android:enabled="@bool/display_aware">
+            android:name=".Aware$Storage_Broadcaster"
+            android:enabled="@bool/display_aware"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_MOUNTED" />
                 <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
@@ -328,227 +364,205 @@
 
         <!-- Providers -->
 
+
         <!-- FOR PLUGINS/APPS COMMENT STARTS HERE -->
 
         <provider
-            android:name="com.aware.providers.Bluetooth_Provider"
+            android:name=".providers.Bluetooth_Provider"
             android:authorities="${applicationId}.provider.bluetooth"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Applications_Provider"
+            android:name=".providers.Applications_Provider"
             android:authorities="${applicationId}.provider.applications"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Locations_Provider"
+            android:name=".providers.Locations_Provider"
             android:authorities="${applicationId}.provider.locations"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Installations_Provider"
+            android:name=".providers.Installations_Provider"
             android:authorities="${applicationId}.provider.installations"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.ESM_Provider"
+            android:name=".providers.ESM_Provider"
             android:authorities="${applicationId}.provider.esm"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Temperature_Provider"
+            android:name=".providers.Temperature_Provider"
             android:authorities="${applicationId}.provider.temperature"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Linear_Accelerometer_Provider"
+            android:name=".providers.Linear_Accelerometer_Provider"
             android:authorities="${applicationId}.provider.accelerometer.linear"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Gravity_Provider"
+            android:name=".providers.Gravity_Provider"
             android:authorities="${applicationId}.provider.gravity"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Barometer_Provider"
+            android:name=".providers.Barometer_Provider"
             android:authorities="${applicationId}.provider.barometer"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Magnetometer_Provider"
+            android:name=".providers.Magnetometer_Provider"
             android:authorities="${applicationId}.provider.magnetometer"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Proximity_Provider"
+            android:name=".providers.Proximity_Provider"
             android:authorities="${applicationId}.provider.proximity"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Light_Provider"
+            android:name=".providers.Light_Provider"
             android:authorities="${applicationId}.provider.light"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Telephony_Provider"
+            android:name=".providers.Telephony_Provider"
             android:authorities="${applicationId}.provider.telephony"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Aware_Provider"
+            android:name=".providers.Aware_Provider"
             android:authorities="${applicationId}.provider.aware"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Rotation_Provider"
+            android:name=".providers.Rotation_Provider"
             android:authorities="${applicationId}.provider.rotation"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.WiFi_Provider"
+            android:name=".providers.WiFi_Provider"
             android:authorities="${applicationId}.provider.wifi"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Accelerometer_Provider"
+            android:name=".providers.Accelerometer_Provider"
             android:authorities="${applicationId}.provider.accelerometer"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Gyroscope_Provider"
+            android:name=".providers.Gyroscope_Provider"
             android:authorities="${applicationId}.provider.gyroscope"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Traffic_Provider"
+            android:name=".providers.Traffic_Provider"
             android:authorities="${applicationId}.provider.traffic"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Mqtt_Provider"
+            android:name=".providers.Mqtt_Provider"
             android:authorities="${applicationId}.provider.mqtt"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Processor_Provider"
+            android:name=".providers.Processor_Provider"
             android:authorities="${applicationId}.provider.processor"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.TimeZone_Provider"
+            android:name=".providers.TimeZone_Provider"
             android:authorities="${applicationId}.provider.timezone"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Battery_Provider"
+            android:name=".providers.Battery_Provider"
             android:authorities="${applicationId}.provider.battery"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Screen_Provider"
+            android:name=".providers.Screen_Provider"
             android:authorities="${applicationId}.provider.screen"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Network_Provider"
+            android:name=".providers.Network_Provider"
             android:authorities="${applicationId}.provider.network"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Communication_Provider"
+            android:name=".providers.Communication_Provider"
             android:authorities="${applicationId}.provider.communication"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
         <provider
-            android:name="com.aware.providers.Keyboard_Provider"
+            android:name=".providers.Keyboard_Provider"
             android:authorities="${applicationId}.provider.keyboard"
             android:exported="true"
             android:readPermission="com.aware.READ_CONTEXT_DATA"
-            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
-            >
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA" >
         </provider>
 
         <!-- FOR PLUGINS/APPS COMMENT STOPS HERE -->
 
+        <activity
+            android:name=".ui.BrowserActivity"
+            android:label="@string/title_activity_browser" >
+        </activity>
     </application>
 
 </manifest>

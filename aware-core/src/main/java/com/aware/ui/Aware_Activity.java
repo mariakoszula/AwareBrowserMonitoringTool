@@ -100,7 +100,7 @@ public class Aware_Activity extends PreferenceActivity {
         navigationToggle = new ActionBarDrawerToggle( Aware_Activity.this, navigationDrawer, toolbar, R.string.drawer_open, R.string.drawer_close );
         navigationDrawer.setDrawerListener(navigationToggle);
 
-        String[] options = {"Stream", "Sensors", "Plugins", "Studies"};
+        String[] options = {"Stream", "Sensors", "Plugins", "Studies", "AwareBrowser"};
         NavigationAdapter nav_adapter = new NavigationAdapter( getApplicationContext(), options);
         navigationList.setAdapter(nav_adapter);
 

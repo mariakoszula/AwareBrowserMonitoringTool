@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AWARE Browser</string>
+    <string name="app_name">AWAREBrowser</string>
     <string name="aware_description">AWARE is an Android\'s framework dedicated to infer, log and share mobile context information between mobile applications. Visit www.awareframework.com for details. </string>
     <string name="application_description">This application is used to monitor web Page loading and gathering more information about the context of webBrowser usage using Aware Framework.</string>
     <string name="read_permission">Allow read-only access to the Context Providers data.</string>
@@ -22,10 +22,9 @@
     <string name="aware_device_id">AWARE Device ID</string>
     <string name="aware_esm_questions">Mobile ESM waiting...</string>
     <string name="aware_activate_accessibility">Activate AWARE in Accessibility Services.</string>
-    <string name="aware_team">Team</string>
+    <string name="aware_team">About</string>
     <string name="aware_qrcode">QRCode</string>
     <string name="title_activity_browser">BrowserActivity</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>

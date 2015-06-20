@@ -21,9 +21,11 @@ android {
     defaultConfig {
         //Comment applicationId out for library
        // applicationId "com.aware"
-        applicationId "com.aware.browser"
-        versionCode 375
-        versionName "3.4.4"
+       // versionCode 375
+       // versionName "3.4.4"
+        applicationId "com.awarebrowser"
+        versionCode 1
+        versionName "1.0"
         targetSdkVersion 22
         signingConfig signingConfigs.debug
     }
@@ -34,9 +36,9 @@ android {
         }
     }
     productFlavors {
-        wear {
+      /*  wear {
             minSdkVersion 21
-        }
+        }*/
         phone {
             minSdkVersion 10 //Android 2.3.3
         }

@@ -52,7 +52,7 @@
             android:title="Accelerometer"
             android:icon="@drawable/ic_action_accelerometer">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="accelerometer" android:title="Accelerometer"/>
 
             <CheckBoxPreference
@@ -76,7 +76,7 @@
             android:title="Applications"
             android:icon="@drawable/ic_action_applications">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="applications" android:title="Applications"/>
 
             <CheckBoxPreference
@@ -129,7 +129,7 @@
             android:title="Barometer"
             android:icon="@drawable/ic_action_barometer">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="barometer" android:title="Barometer"/>
 
             <CheckBoxPreference
@@ -153,7 +153,7 @@
             android:title="Battery"
             android:icon="@drawable/ic_action_battery">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="battery" android:title="Battery"/>
 
             <CheckBoxPreference
@@ -168,7 +168,7 @@
             android:title="Bluetooth"
             android:icon="@drawable/ic_action_bluetooth">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="bluetooth" android:title="Bluetooth"/>
 
             <CheckBoxPreference
@@ -192,7 +192,7 @@
             android:title="Communication"
             android:icon="@drawable/ic_action_communication">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="communication" android:title="Communication"/>
 
             <CheckBoxPreference
@@ -220,7 +220,7 @@
             android:title="Mobile ESM/EMA"
             android:icon="@drawable/ic_action_esm">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="esm" android:title="Mobile ESM/EMA"/>
 
             <CheckBoxPreference
@@ -236,7 +236,7 @@
             android:title="Gravity"
             android:icon="@drawable/ic_action_gravity">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="gravity" android:title="Gravity"/>
 
             <CheckBoxPreference
@@ -261,7 +261,7 @@
             android:title="Gyroscope"
             android:icon="@drawable/ic_action_gyroscope">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="gyroscope" android:title="Gyroscope"/>
 
             <CheckBoxPreference
@@ -286,7 +286,7 @@
             android:title="Locations"
             android:icon="@drawable/ic_action_locations">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="locations" android:title="Locations"/>
 
             <CheckBoxPreference
@@ -351,7 +351,7 @@
             android:title="Light"
             android:icon="@drawable/ic_action_light">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="light" android:title="Light"/>
 
             <CheckBoxPreference
@@ -376,7 +376,7 @@
             android:title="Linear accelerometer"
             android:icon="@drawable/ic_action_linear_acceleration">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="linear_accelerometer" android:title="Linear accelerometer"/>
 
             <CheckBoxPreference
@@ -401,7 +401,7 @@
             android:title="Network"
             android:icon="@drawable/ic_action_network">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="network" android:title="Network"/>
 
             <CheckBoxPreference
@@ -431,7 +431,7 @@
             android:title="Magnetometer"
             android:icon="@drawable/ic_action_magnetometer">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="magnetometer" android:title="Magnetometer"/>
 
             <CheckBoxPreference
@@ -456,7 +456,7 @@
             android:title="Processor workload"
             android:icon="@drawable/ic_action_processor">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="processor" android:title="Processor workload"/>
 
             <CheckBoxPreference
@@ -480,7 +480,7 @@
             android:title="Timezone"
             android:icon="@drawable/ic_action_timezone">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="timezone" android:title="Timezone"/>
 
             <CheckBoxPreference
@@ -504,7 +504,7 @@
             android:title="Proximity"
             android:icon="@drawable/ic_action_proximity">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="proximity" android:title="Proximity"/>
 
             <CheckBoxPreference
@@ -529,7 +529,7 @@
             android:title="Rotation"
             android:icon="@drawable/ic_action_rotation">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="rotation" android:title="Rotation"/>
 
             <CheckBoxPreference
@@ -554,7 +554,7 @@
             android:title="Screen usage"
             android:icon="@drawable/ic_action_screen">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="screen" android:title="Screen usage"/>
 
             <CheckBoxPreference
@@ -571,7 +571,7 @@
             android:title="Temperature"
             android:icon="@drawable/ic_action_temperature">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="temperature" android:title="Temperature"/>
 
             <CheckBoxPreference
@@ -596,7 +596,7 @@
             android:title="Telephony"
             android:icon="@drawable/ic_action_telephony">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="telephony" android:title="Telephony"/>
 
             <CheckBoxPreference
@@ -611,7 +611,7 @@
             android:title="Wi-Fi"
             android:icon="@drawable/ic_action_wifi">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="wifi" android:title="Wi-Fi"/>
 
             <CheckBoxPreference
@@ -640,7 +640,7 @@
             android:title="MQTT Server"
             android:icon="@drawable/ic_action_mqtt">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="mqtt" android:title="MQTT Server"/>
 
             <CheckBoxPreference
@@ -699,7 +699,7 @@
             android:title="AWARE Study"
             android:icon="@drawable/ic_action_study">
 
-            <com.aware.ui.Aware_Toolbar
+            <com.awarebrowser.ui.Aware_Toolbar
                 android:key="webservice" android:title="AWARE Study"/>
 
             <CheckBoxPreference
